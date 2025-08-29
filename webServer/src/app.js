@@ -65,14 +65,6 @@ app.get('/weather', (req, res) => {
         })
     })
 })
-
-
-
-    // res.send({
-    //     forecast: 'Chilly & Clear',
-    //     location: 'Charlotte',
-    //     address: req.query.address
-    // })
 })
 
 app.get('/products', (req, res) => {
