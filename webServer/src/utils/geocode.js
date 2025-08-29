@@ -1,6 +1,7 @@
 const request = require('request')
 
 const geocode = (address, callback) => {
+    // makes geocode accurate for accurate weather info
     const url = 'https://api.mapbox.com/geocoding/v5/mapbox.places/' + encodeURIComponent(address) + '.json?access_token=pk.eyJ1IjoiZWRkaWVtanIiLCJhIjoiY21ldDh1eDFuMGJiOTJtcTNvYXNyNGdtbCJ9.B4WyVNxox-HHLZQH3VYMXw'
 
     request({ url, json:true}, (error, {body}) => {
@@ -18,4 +19,5 @@ const geocode = (address, callback) => {
     })
 }
 
+// allows this file to be imported by other files
 module.exports = geocode
